@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODS 14 - Vida na água</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0a97d9; /* Cor de fundo similar à da imagem */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .ods-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .ods-header img {
+            width: 800px; /* Ajuste o tamanho do ícone */
+            height: auto;
+        }
+
+        .ods-header h2 {
+            color: #0a97d9; /* Cor do título baseada na imagem */
+        }
+
+        article h3 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none; /* Remove o estilo padrão de lista */
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .carousel-container {
+            width: 100%;
+            max-width: 850px;
+            margin-bottom: 200px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ods-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .ods-subtitle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .ods-texts-box {
+            margin-top: 50px; 
+            margin-bottom: 50px;
+            padding: 20px; 
+            background-color: #f4f4f9; 
+            border-radius: 15px;
+            border-style:solid; 
+            border-color: #0a97d9;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .ods-title h2 {
+            color: #0a97d9;
+        }
+
+        .ods-texts {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .ods-texts li {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .ods-texts-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        
+        .carousel-indicators {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .carousel-indicators span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .carousel-indicators .active {
+            background-color: #333;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Espaço entre os itens */
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: relative; /* Para o modal */
+        }
+
+        .dropdown-container {
+            top: 20px;
+            right: 20px;
+        }
+
+        /* Estilo do dropdown */
+        .dropdown {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Estilo das opções */
+        .dropdown option {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .back {
+            margin-left: 30%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Objetivo de Desenvolvimento Sustentável</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="ods-title">
+                <h2>14 Vida na água</h2>
+            </div>
+
+            <div class="ods-subtitle">
+                <p>Conservar e usar de forma sustentável os oceanos, mares e os recursos marinhos para o desenvolvimento sustentável</p>
+            </div>
+
+            <div class="carousel-container">
+                <!-- Slide wrapper -->
+                <div class="carousel-slide" id="carouselSlide">
+                    <img src="/vida1.jpg" alt="Um grande cardume de peixes prateados nadando juntos em águas profundas e azuis. Os peixes estão em movimento, com suas nadadeiras refletindo a luz. A imagem transmite a sensação de abundância e sincronia entre os peixes.">
+                    <img src="/vida2.webp" alt="Uma tartaruga marinha nadando calmamente em águas azul-esverdeadas. Ela está ligeiramente de perfil e se encontra abaixo da superfície da água, que está levemente ondulada. Ao fundo, é possível ver uma paisagem submarina desfocada, com o fundo do oceano e algumas rochas.">
+                    <img src="/vida3.jpg" alt="Uma cena de recife de coral colorido. Um peixe amarelo, conhecido como peixe-cirurgião, nada ao lado de um peixe-palhaço laranja e branco. Ambos estão cercados por corais de várias cores e texturas, criando um ambiente vibrante e natural.">
+                </div>
+        
+                <!-- Botões de navegação -->
+                <div class="prev" onclick="moveSlide(-1)">&#10094;</div>
+                <div class="next" onclick="moveSlide(1)">&#10095;</div>
+            </div>
+        
+            <!-- Indicadores -->
+            <div class="carousel-indicators" id="carouselIndicators">
+                <span onclick="setSlide(0)"></span>
+                <span onclick="setSlide(1)"></span>
+                <span onclick="setSlide(2)"></span>
+            </div>
+        
+            <script>
+                let currentIndex = 0;
+        
+                function showSlide(index) {
+                    const slides = document.getElementById('carouselSlide');
+                    const indicators = document.querySelectorAll('.carousel-indicators span');
+        
+                    // Ajusta o índice para o intervalo dos slides
+                    if (index >= slides.children.length) currentIndex = 0;
+                    else if (index < 0) currentIndex = slides.children.length - 1;
+                    else currentIndex = index;
+        
+                    // Atualiza a posição do slide
+                    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+                    // Atualiza os indicadores
+                    indicators.forEach(ind => ind.classList.remove('active'));
+                    indicators[currentIndex].classList.add('active');
+                }
+        
+                function moveSlide(step) {
+                    showSlide(currentIndex + step);
+                }
+        
+                function setSlide(index) {
+                    showSlide(index);
+                }
+        
+                // Inicializa o primeiro slide
+                showSlide(currentIndex);
+            </script>
+
+            <article class="ods-texts-box">
+                <h3 class="ods-texts-title">Objetivo 14. Conservar e usar de forma sustentável os oceanos, mares e os recursos marinhos para o desenvolvimento sustentável</h3>
+                <ul class="ods-texts">
+                    <li><strong>14.1</strong> Até 2025, prevenir e reduzir significativamente a poluição marinha de todos os tipos, especialmente a advinda de atividades terrestres, incluindo detritos marinhos e a poluição por nutrientes.</li>
+                    <li><strong>14.2</strong> Até 2020, gerir de forma sustentável e proteger os ecossistemas marinhos e costeiros para evitar impactos adversos significativos, inclusive por meio do reforço da sua capacidade de resiliência, e tomar medidas para a sua restauração, a fim de assegurar oceanos saudáveis e produtivos.</li>
+                    <li><strong>14.3</strong> Minimizar e enfrentar os impactos da acidificação dos oceanos, inclusive por meio do reforço da cooperação científica em todos os níveis.</li>
+                    <li><strong>14.4</strong> Até 2020, efetivamente regular a coleta, e acabar com a sobrepesca, ilegal, não reportada e não regulamentada e as práticas de pesca destrutivas, e implementar planos de gestão com base científica, para restaurar populações de peixes no menor tempo possível, pelo menos a níveis que possam produzir rendimento máximo sustentável, como determinado por suas características biológicas.</li>
+                    <li><strong>14.5</strong> Até 2020, conservar pelo menos 10% das zonas costeiras e marinhas, de acordo com a legislação nacional e internacional, e com base na melhor informação científica disponível.</li>
+                    <li><strong>14.6</strong> Até 2020, proibir certas formas de subsídios à pesca, que contribuem para a sobrecapacidade e a sobrepesca, e eliminar os subsídios que contribuam para a pesca ilegal, não reportada e não regulamentada, e abster-se de introduzir novos subsídios como estes, reconhecendo que o tratamento especial e diferenciado adequado e eficaz para os países em desenvolvimento e os países menos desenvolvidos deve ser parte integrante da negociação sobre subsídios à pesca da Organização Mundial do Comércio.</li>
+                    <li><strong>14.7</strong> Até 2030, aumentar os benefícios econômicos para os pequenos Estados insulares em desenvolvimento e os países menos desenvolvidos, a partir do uso sustentável dos recursos marinhos, inclusive por meio de uma gestão sustentável da pesca, aquicultura e turismo.</li>
+                    <li><strong>14.a</strong> Aumentar o conhecimento científico, desenvolver capacidades de pesquisa e transferir tecnologia marinha, tendo em conta os critérios e orientações sobre a Transferência de Tecnologia Marinha da Comissão Oceanográfica Intergovernamental, a fim de melhorar a saúde dos oceanos e aumentar a contribuição da biodiversidade marinha para o desenvolvimento dos países em desenvolvimento, em particular os pequenos Estados insulares em desenvolvimento e os países menos desenvolvidos.</li>
+                    <li><strong>14.b</strong> Proporcionar o acesso dos pescadores artesanais de pequena escala aos recursos marinhos e mercados.</li>
+                    <li><strong>14.c</strong> Assegurar a conservação e o uso sustentável dos oceanos e seus recursos pela implementação do direito internacional, como refletido na UNCLOS [Convenção das Nações Unidas sobre o Direito do Mar], que provê o arcabouço legal para a conservação e utilização sustentável dos oceanos e dos seus recursos, conforme registrado no parágrafo 158 do “Futuro Que Queremos”.</li>
+                
+                </ul>                
+                
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="dropdown-container">
+            <label for="fontSizeDropdown" style="color: #4CAF50; font-weight: bold;">Tamanho da Fonte:</label>
+            <select id="fontSizeDropdown" class="dropdown">
+                <option value="small">Pequeno</option>
+                <option value="medium" selected>Médio</option>
+                <option value="large">Grande</option>
+            </select>
+        </div>
+        <p class="back"><a href="index.html">Voltar para os ODS</a></p>
+    </footer>
+    <script>
+        // Altera o tamanho da fonte da página com base na seleção
+    const fontSizeDropdown = document.getElementById("fontSizeDropdown");
+    fontSizeDropdown.addEventListener("change", function() {
+        if (this.value === "small") {
+            document.body.style.fontSize = "14px";
+        } else if (this.value === "medium") {
+            document.body.style.fontSize = "16px";
+        } else if (this.value === "large") {
+            document.body.style.fontSize = "18px";
+        }
+    });
+</script>
+</body>
+</html>

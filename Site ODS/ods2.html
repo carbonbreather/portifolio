@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODS 2 - Fome Zero e Agricultura Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #dda83a; /* Cor de fundo similar à da imagem */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .ods-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .ods-subtitle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .ods-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .ods-header img {
+            width: 800px; /* Ajuste o tamanho do ícone */
+            height: auto;
+        }
+
+        .ods-header h2 {
+            color: #dda83a; /* Cor do título baseada na imagem */
+        }
+
+        .ods-title h2 {
+            color: #dda83a;
+        }
+
+        article h3 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none; /* Remove o estilo padrão de lista */
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .carousel-container {
+            width: 100%;
+            max-width: 850px;
+            margin-bottom: 200px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ods-texts-box {
+            margin-top: 50px; 
+            margin-bottom: 50px;
+            padding: 20px; 
+            background-color: #f4f4f9; 
+            border-radius: 15px;
+            border-style:solid; 
+            border-color: #dda83a;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .ods-texts {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .ods-texts li {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .ods-texts-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            min-width: 100%;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        
+        .carousel-indicators {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .carousel-indicators span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .carousel-indicators .active {
+            background-color: #333;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Espaço entre os itens */
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: relative; /* Para o modal */
+        }
+
+        .dropdown-container {
+            top: 20px;
+            right: 20px;
+        }
+
+        /* Estilo do dropdown */
+        .dropdown {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Estilo das opções */
+        .dropdown option {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .back {
+            margin-left: 30%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Objetivo de Desenvolvimento Sustentável</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="ods-title">
+                <h2>2 Fome Zero e Agricultura Sustentável</h2>
+            </div>
+
+            <div class="ods-subtitle">
+                <p>Erradicar a fome, alcançar a segurança alimentar, melhorar a nutrição e promover a agricultura sustentável</p>
+            </div>
+
+            <div class="carousel-container">
+                <!-- Slide wrapper -->
+                <div class="carousel-slide" id="carouselSlide">
+                    <img src="/agro1.jpg" alt="A imagem mostra um trator vermelho e amarelo pulverizando um campo de plantações verdes. O céu está azul e o sol está brilhando.">
+                    <img src="/agro2.png" alt="Uma mão está segurando uma muda de planta. A mão parece ser de uma pessoa de pele clara e o fundo é desfocado, mostrando outras plantas. A cena transmite uma sensação de cuidado e cultivo.">
+                    <img src="/agro3.webp" alt="Esta imagem mostra um menino jovem e sorridente segurando uma tigela de comida. A imagem está focada no rosto do menino, com a comida e o fundo levemente desfocados. O menino tem a pele escura e um sorriso radiante, mostrando seus dentes. Ele parece feliz e contente.">
+                </div>
+        
+                <!-- Botões de navegação -->
+                <div class="prev" onclick="moveSlide(-1)">&#10094;</div>
+                <div class="next" onclick="moveSlide(1)">&#10095;</div>
+            </div>
+        
+            <!-- Indicadores -->
+            <div class="carousel-indicators" id="carouselIndicators">
+                <span onclick="setSlide(0)"></span>
+                <span onclick="setSlide(1)"></span>
+                <span onclick="setSlide(2)"></span>
+            </div>
+        
+            <script>
+                let currentIndex = 0;
+        
+                function showSlide(index) {
+                    const slides = document.getElementById('carouselSlide');
+                    const indicators = document.querySelectorAll('.carousel-indicators span');
+        
+                    // Ajusta o índice para o intervalo dos slides
+                    if (index >= slides.children.length) currentIndex = 0;
+                    else if (index < 0) currentIndex = slides.children.length - 1;
+                    else currentIndex = index;
+        
+                    // Atualiza a posição do slide
+                    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+                    // Atualiza os indicadores
+                    indicators.forEach(ind => ind.classList.remove('active'));
+                    indicators[currentIndex].classList.add('active');
+                }
+        
+                function moveSlide(step) {
+                    showSlide(currentIndex + step);
+                }
+        
+                function setSlide(index) {
+                    showSlide(index);
+                }
+        
+                // Inicializa o primeiro slide
+                showSlide(currentIndex);
+            </script>
+
+            <article class="ods-texts-box">
+                <h3 class="ods-texts-title">Objetivo 2.  Acabar com a fome, alcançar a segurança alimentar e melhoria da nutrição e promover a agricultura sustentável</h3>
+                <ul class="ods-texts">
+                    <li><strong>2.1</strong> Até 2030, acabar com a fome e garantir o acesso de todas as pessoas, em particular os pobres e pessoas em situações vulneráveis, incluindo crianças, a alimentos seguros, nutritivos e suficientes durante todo o ano
+                    </li>
+                    <li><strong>2.2</strong> Até 2030, acabar com todas as formas de desnutrição, incluindo atingir, até 2025, as metas acordadas internacionalmente sobre nanismo e caquexia em crianças menores de cinco anos de idade, e atender às necessidades nutricionais dos adolescentes, mulheres grávidas e lactantes e pessoas idosas.</li>
+                    <li><strong>2.3</strong> Até 2030, dobrar a produtividade agrícola e a renda dos pequenos produtores de alimentos, particularmente das mulheres, povos indígenas, agricultores familiares, pastores e pescadores, inclusive por meio de acesso seguro e igual à terra, outros recursos produtivos e insumos, conhecimento, serviços financeiros, mercados e oportunidades de agregação de valor e de emprego não agrícola.</li>
+                    <li><strong>2.4</strong> Até 2030, garantir sistemas sustentáveis de produção de alimentos e implementar práticas agrícolas resilientes, que aumentem a produtividade e a produção, que ajudem a manter os ecossistemas, que fortaleçam a capacidade de adaptação às mudanças climáticas, às condições meteorológicas extremas, secas, inundações e outros desastres, e que melhorem progressivamente a qualidade da terra e do solo.</li>
+                    <li><strong>2.5</strong> Até 2020, manter a diversidade genética de sementes, plantas cultivadas, animais de criação e domesticados e suas respectivas espécies selvagens, inclusive por meio de bancos de sementes e plantas diversificados e bem geridos em nível nacional, regional e internacional, e garantir o acesso e a repartição justa e equitativa dos benefícios decorrentes da utilização dos recursos genéticos e conhecimentos tradicionais associados, como acordado internacionalmente.</li>
+                    <li><strong>2.a</strong> Aumentar o investimento, inclusive via o reforço da cooperação internacional, em infraestrutura rural, pesquisa e extensão de serviços agrícolas, desenvolvimento de tecnologia, e os bancos de genes de plantas e animais, para aumentar a capacidade de produção agrícola nos países em desenvolvimento, em particular nos países menos desenvolvidos.</li>
+                    <li><strong>2.b</strong> Corrigir e prevenir as restrições ao comércio e distorções nos mercados agrícolas mundiais, incluindo a eliminação paralela de todas as formas de subsídios à exportação e todas as medidas de exportação com efeito equivalente, de acordo com o mandato da Rodada de Desenvolvimento de Doha.</li>
+                    <li><strong>2.c</strong>  Adotar medidas para garantir o funcionamento adequado dos mercados de commodities de alimentos e seus derivados, e facilitar o acesso oportuno à informação de mercado, inclusive sobre as reservas de alimentos, a fim de ajudar a limitar a volatilidade extrema dos preços dos alimentos</li>
+
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="dropdown-container">
+            <label for="fontSizeDropdown" style="color: #4CAF50; font-weight: bold;">Tamanho da Fonte:</label>
+            <select id="fontSizeDropdown" class="dropdown">
+                <option value="small">Pequeno</option>
+                <option value="medium" selected>Médio</option>
+                <option value="large">Grande</option>
+            </select>
+        </div>
+        <p class="back"><a href="index.html">Voltar para os ODS</a></p>
+    </footer>
+    <script>
+        // Altera o tamanho da fonte da página com base na seleção
+    const fontSizeDropdown = document.getElementById("fontSizeDropdown");
+    fontSizeDropdown.addEventListener("change", function() {
+        if (this.value === "small") {
+            document.body.style.fontSize = "14px";
+        } else if (this.value === "medium") {
+            document.body.style.fontSize = "16px";
+        } else if (this.value === "large") {
+            document.body.style.fontSize = "18px";
+        }
+    });
+</script>
+</body>
+</html>

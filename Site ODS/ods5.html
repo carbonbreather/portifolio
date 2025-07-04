@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODS 5 - Igualdade de Gênero</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff3a21; /* Cor de fundo similar à da imagem */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .ods-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .ods-subtitle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .ods-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .ods-header img {
+            width: 800px;
+            height: auto;
+        }
+
+        .ods-header h2 {
+            color: #ff3a21;
+        }
+
+        .ods-title h2 {
+            color: #ff3a21;
+        }
+
+        article h3 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none; /* Remove o estilo padrão de lista */
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .carousel-container {
+            width: 100%;
+            max-width: 850px;
+            margin-bottom: 200px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ods-texts-box {
+            margin-top: 50px; 
+            margin-bottom: 50px;
+            padding: 20px; 
+            background-color: #f4f4f9; 
+            border-radius: 15px;
+            border-style:solid; 
+            border-color: #ff3a21;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .ods-texts {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .ods-texts li {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .ods-texts-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        
+        .carousel-indicators {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .carousel-indicators span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .carousel-indicators .active {
+            background-color: #333;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Espaço entre os itens */
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: relative; /* Para o modal */
+        }
+
+        .dropdown-container {
+            top: 20px;
+            right: 20px;
+        }
+
+        /* Estilo do dropdown */
+        .dropdown {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Estilo das opções */
+        .dropdown option {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .back {
+            margin-left: 30%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Objetivo de Desenvolvimento Sustentável</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="ods-title">
+                <h2>5 Igualdade de Gênero</h2>
+            </div>
+
+            <div class="ods-subtitle">
+                <p>Alcançar a igualdade de gênero e empoderar todas as mulheres e meninas</p>
+            </div>
+
+            <div class="carousel-container">
+                <!-- Slide wrapper -->
+                <div class="carousel-slide" id="carouselSlide">
+                    <img src="/igualdade1.jpg" alt="Esta imagem mostra um balanço de madeira com uma figura de mulher rosa e uma figura de homem azul de pé em cada lado. Cada figura está equilibrada por uma pilha de moedas. A mão de uma pessoa está na imagem, colocando as moedas na pilha da mulher. A imagem sugere um conceito de equilíbrio ou igualdade.">
+                    <img src="igualdade2.jpg" alt="A ilustração mostra uma mulher e um homem sentados em plataformas opostas de uma balança. A mulher tem um símbolo feminino ao lado dela e o homem tem um símbolo masculino. No centro da balança, um sinal de igualdade, indicando que homens e mulheres são iguais. A ilustração promove a igualdade de gênero.">
+                    <img src="igualdade3.png" alt="A imagem mostra dois silhuetas, uma feminina e outra masculina, que se sobrepõem. No centro, um símbolo de Vênus com um sinal de igual. Esta imagem representa igualdade de gênero.">
+                </div>
+        
+                <!-- Botões de navegação -->
+                <div class="prev" onclick="moveSlide(-1)">&#10094;</div>
+                <div class="next" onclick="moveSlide(1)">&#10095;</div>
+            </div>
+        
+            <!-- Indicadores -->
+            <div class="carousel-indicators" id="carouselIndicators">
+                <span onclick="setSlide(0)"></span>
+                <span onclick="setSlide(1)"></span>
+                <span onclick="setSlide(2)"></span>
+            </div>
+        
+            <script>
+                let currentIndex = 0;
+        
+                function showSlide(index) {
+                    const slides = document.getElementById('carouselSlide');
+                    const indicators = document.querySelectorAll('.carousel-indicators span');
+        
+                    // Ajusta o índice para o intervalo dos slides
+                    if (index >= slides.children.length) currentIndex = 0;
+                    else if (index < 0) currentIndex = slides.children.length - 1;
+                    else currentIndex = index;
+        
+                    // Atualiza a posição do slide
+                    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+                    // Atualiza os indicadores
+                    indicators.forEach(ind => ind.classList.remove('active'));
+                    indicators[currentIndex].classList.add('active');
+                }
+        
+                function moveSlide(step) {
+                    showSlide(currentIndex + step);
+                }
+        
+                function setSlide(index) {
+                    showSlide(index);
+                }
+        
+                // Inicializa o primeiro slide
+                showSlide(currentIndex);
+            </script>
+
+            <article class="ods-texts-box">
+                <h3 class="ods-texts-title">Objetivo 5. Alcançar a igualdade de gênero e empoderar todas as mulheres e meninas</h3>
+                <ul class="ods-texts">
+                    <li><strong>5.1</strong> Acabar com todas as formas de discriminação contra as mulheres e meninas em toda parte.</li>
+                    <li><strong>5.2</strong> Eliminar todas as formas de violência contra todas as mulheres e meninas nas esferas públicas e privadas, incluindo o tráfico e exploração sexual e de outros tipos.</li>
+                    <li><strong>5.3</strong> Eliminar todas as práticas nocivas, como os casamentos prematuros, forçados e de crianças e mutilações genitais femininas.</li>
+                    <li><strong>5.4</strong> Reconhecer e valorizar o trabalho de assistência e doméstico não remunerado, por meio da disponibilização de serviços públicos, infraestrutura e políticas de proteção social.</li>
+                    <li><strong>5.5</strong> Garantir a participação plena e efetiva das mulheres e a igualdade de oportunidades para a liderança em todos os níveis de tomada de decisão na vida política, econômica e pública.</li>
+                    <li><strong>5.6</strong> Assegurar o acesso universal à saúde sexual e reprodutiva e aos direitos reprodutivos.</li>
+                    <li><strong>5.a</strong> Realizar reformas para dar às mulheres direitos iguais aos recursos econômicos, à propriedade e serviços financeiros.</li>
+                    <li><strong>5.b</strong> Aumentar o uso de tecnologias de base, em particular as tecnologias de informação e comunicação, para promover o empoderamento das mulheres.</li>
+                    <li><strong>5.c</strong> Adotar políticas e legislação aplicáveis para promover a igualdade de gênero.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="dropdown-container">
+            <label for="fontSizeDropdown" style="color: #4CAF50; font-weight: bold;">Tamanho da Fonte:</label>
+            <select id="fontSizeDropdown" class="dropdown">
+                <option value="small">Pequeno</option>
+                <option value="medium" selected>Médio</option>
+                <option value="large">Grande</option>
+            </select>
+        </div>
+        <p class="back"><a href="index.html">Voltar para os ODS</a></p>
+    </footer>
+    <script>
+        // Altera o tamanho da fonte da página com base na seleção
+    const fontSizeDropdown = document.getElementById("fontSizeDropdown");
+    fontSizeDropdown.addEventListener("change", function() {
+        if (this.value === "small") {
+            document.body.style.fontSize = "14px";
+        } else if (this.value === "medium") {
+            document.body.style.fontSize = "16px";
+        } else if (this.value === "large") {
+            document.body.style.fontSize = "18px";
+        }
+    });
+</script>
+</body>
+</html>

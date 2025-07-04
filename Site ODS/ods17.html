@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODS 17 - Parcerias e meios de implementação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #19486a; /* Cor de fundo similar à da imagem */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .ods-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .ods-header img {
+            width: 800px; /* Ajuste o tamanho do ícone */
+            height: auto;
+        }
+
+        .ods-header h2 {
+            color: #19486a; /* Cor do título baseada na imagem */
+        }
+
+        article h3 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none; /* Remove o estilo padrão de lista */
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .carousel-container {
+            width: 100%;
+            max-width: 850px;
+            margin-bottom: 200px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ods-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .ods-subtitle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .ods-texts-box {
+            margin-top: 50px; 
+            margin-bottom: 50px;
+            padding: 50px; 
+            background-color: #f4f4f9; 
+            border-radius: 15px;
+            border-style:solid; 
+            border-color: #19486a;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .ods-title h2 {
+            color: #19486a;
+        }
+
+        .ods-texts {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .ods-texts li {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .ods-texts-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        
+        .carousel-indicators {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .carousel-indicators span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .carousel-indicators .active {
+            background-color: #333;
+        }
+
+        .accordion {
+            width: 100%;
+            max-width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        .accordion-title {
+            background-color: #19486a;
+            color: #fff;
+            padding: 15px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            position: relative;
+            transition: background-color 0.3s;
+        }
+
+        .accordion-title:hover {
+            background-color: #0e3855;
+        }
+
+        .accordion-title::after {
+            content: '+';
+            font-weight: bold;
+            position: absolute;
+            right: 20px;
+            transition: transform 0.3s;
+        }
+
+        .accordion-title.active::after {
+            content: '-';
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            font-size: 16px;
+            color: #333;
+            background-color: #fafafa;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-content p {
+            margin: 15px 0;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Espaço entre os itens */
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: relative; /* Para o modal */
+        }
+
+        .dropdown-container {
+            top: 20px;
+            right: 20px;
+        }
+
+        /* Estilo do dropdown */
+        .dropdown {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Estilo das opções */
+        .dropdown option {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .back {
+            margin-left: 30%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Objetivo de Desenvolvimento Sustentável</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="ods-title">
+                <h2>17 Parcerias e meios de implementação</h2>
+            </div>
+
+            <div class="ods-subtitle">
+                <p>Reforçar os meios de implementação e revitalizar a parceria global para o desenvolvimento sustentável</p>
+            </div>
+
+            <div class="carousel-container">
+                <!-- Slide wrapper -->
+                <div class="carousel-slide" id="carouselSlide">
+                    <img src="/parceria1.jpg" alt="Uma fotografia aérea de um grande grupo de pessoas em pé em um círculo em um gramado. As pessoas estão vestidas com roupas coloridas e estão em um círculo irregular. Há um pequeno chafariz no gramado e algumas árvores ao fundo.">
+                    <img src="/parceria2.png" alt="Esta é uma imagem de quatro amigos sorrindo, com um homem usando uma camisa azul na frente. Eles estão fazendo um toque de punhos.">
+                    <img src="/parceria3.jpg" alt="Aqui está uma descrição da imagem: Um grupo de quatro pessoas se diverte, com três olhando para a direita e uma olhando para a esquerda. Duas pessoas estão usando camisas com mangas curtas, uma está usando uma camisa com mangas longas e uma está usando uma camiseta branca. Um homem está vestindo calças cáqui e outro está usando jeans preto.">
+                </div>
+        
+                <!-- Botões de navegação -->
+                <div class="prev" onclick="moveSlide(-1)">&#10094;</div>
+                <div class="next" onclick="moveSlide(1)">&#10095;</div>
+            </div>
+        
+            <!-- Indicadores -->
+            <div class="carousel-indicators" id="carouselIndicators">
+                <span onclick="setSlide(0)"></span>
+                <span onclick="setSlide(1)"></span>
+                <span onclick="setSlide(2)"></span>
+            </div>
+        
+            <script>
+                let currentIndex = 0;
+        
+                function showSlide(index) {
+                    const slides = document.getElementById('carouselSlide');
+                    const indicators = document.querySelectorAll('.carousel-indicators span');
+        
+                    // Ajusta o índice para o intervalo dos slides
+                    if (index >= slides.children.length) currentIndex = 0;
+                    else if (index < 0) currentIndex = slides.children.length - 1;
+                    else currentIndex = index;
+        
+                    // Atualiza a posição do slide
+                    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+                    // Atualiza os indicadores
+                    indicators.forEach(ind => ind.classList.remove('active'));
+                    indicators[currentIndex].classList.add('active');
+                }
+        
+                function moveSlide(step) {
+                    showSlide(currentIndex + step);
+                }
+        
+                function setSlide(index) {
+                    showSlide(index);
+                }
+        
+                // Inicializa o primeiro slide
+                showSlide(currentIndex);
+            </script>
+
+            <article class="ods-texts-box">
+                <div class="accordion">
+                    <!-- Finanças Section -->
+                    <div class="accordion-item">
+                        <div class="accordion-title">Finanças</div>
+                        <div class="accordion-content">
+                            <p>17.1 Fortalecer a mobilização de recursos internos...</p>
+                            <p>17.2 Países desenvolvidos implementarem plenamente os seus compromissos...</p>
+                            <p>17.3 Mobilizar recursos financeiros adicionais para os países em desenvolvimento...</p>
+                            <p>17.4 Ajudar os países em desenvolvimento a alcançar a sustentabilidade da dívida...</p>
+                            <p>17.5 Adotar e implementar regimes de promoção de investimentos...</p>
+                        </div>
+                    </div>
+            
+                    <!-- Tecnologia Section -->
+                    <div class="accordion-item">
+                        <div class="accordion-title">Tecnologia</div>
+                        <div class="accordion-content">
+                            <p>17.6 Melhorar a cooperação Norte-Sul, Sul-Sul e triangular regional e internacional...</p>
+                            <p>17.7 Promover o desenvolvimento, a transferência, a disseminação e a difusão...</p>
+                            <p>17.8 Operacionalizar plenamente o Banco de Tecnologia e o mecanismo de capacitação...</p>
+                        </div>
+                    </div>
+            
+                    <!-- Capacitação Section -->
+                    <div class="accordion-item">
+                        <div class="accordion-title">Capacitação</div>
+                        <div class="accordion-content">
+                            <p>17.9 Reforçar o apoio internacional para a implementação eficaz e orientada da capacitação...</p>
+                        </div>
+                    </div>
+            
+                    <!-- Comércio Section -->
+                    <div class="accordion-item">
+                        <div class="accordion-title">Comércio</div>
+                        <div class="accordion-content">
+                            <p>17.10 Promover um sistema multilateral de comércio universal...</p>
+                            <p>17.11 Aumentar significativamente as exportações dos países em desenvolvimento...</p>
+                            <p>17.12 Concretizar a implementação oportuna de acesso a mercados livres...</p>
+                        </div>
+                    </div>
+            
+                    <!-- Questões Sistêmicas Section -->
+                    <div class="accordion-item">
+                        <div class="accordion-title">Questões Sistêmicas</div>
+                        <div class="accordion-content">
+                            <p>17.13 Aumentar a estabilidade macroeconômica global...</p>
+                            <p>17.14 Aumentar a coerência das políticas para o desenvolvimento sustentável...</p>
+                            <p>17.15 Respeitar o espaço político e a liderança de cada país...</p>
+                        </div>
+                    </div>
+            
+                    <!-- Parcerias Multissetoriais Section -->
+                    <div class="accordion-item">
+                        <div class="accordion-title">Parcerias Multissetoriais</div>
+                        <div class="accordion-content">
+                            <p>17.16 Reforçar a parceria global para o desenvolvimento sustentável...</p>
+                            <p>17.17 Incentivar e promover parcerias públicas, público-privadas...</p>
+                        </div>
+                    </div>
+            
+                    <!-- Dados, Monitoramento e Prestação de Contas Section -->
+                    <div class="accordion-item">
+                        <div class="accordion-title">Dados, Monitoramento e Prestação de Contas</div>
+                        <div class="accordion-content">
+                            <p>17.18 Até 2020, reforçar o apoio à capacitação para os países em desenvolvimento...</p>
+                            <p>17.19 Até 2030, valer-se de iniciativas existentes para desenvolver medidas do progresso...</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <script>
+                    document.querySelectorAll('.accordion-title').forEach(item => {
+                        item.addEventListener('click', () => {
+                            const content = item.nextElementSibling;
+            
+                            item.classList.toggle('active');
+            
+                            if (content.style.maxHeight) {
+                                content.style.maxHeight = null;
+                            } else {
+                                content.style.maxHeight = content.scrollHeight + 'px';
+                            }
+                        });
+                    });
+                </script>                                   
+                
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="dropdown-container">
+            <label for="fontSizeDropdown" style="color: #4CAF50; font-weight: bold;">Tamanho da Fonte:</label>
+            <select id="fontSizeDropdown" class="dropdown">
+                <option value="small">Pequeno</option>
+                <option value="medium" selected>Médio</option>
+                <option value="large">Grande</option>
+            </select>
+        </div>
+        <p class="back"><a href="index.html">Voltar para os ODS</a></p>
+    </footer>
+    <script>
+        // Altera o tamanho da fonte da página com base na seleção
+    const fontSizeDropdown = document.getElementById("fontSizeDropdown");
+    fontSizeDropdown.addEventListener("change", function() {
+        if (this.value === "small") {
+            document.body.style.fontSize = "14px";
+        } else if (this.value === "medium") {
+            document.body.style.fontSize = "16px";
+        } else if (this.value === "large") {
+            document.body.style.fontSize = "18px";
+        }
+    });
+</script>
+</body>
+</html>

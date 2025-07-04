@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODS 13 - Ação contra a mudança global do clima</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3f7e44; /* Cor de fundo similar à da imagem */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .ods-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .ods-header img {
+            width: 800px; /* Ajuste o tamanho do ícone */
+            height: auto;
+        }
+
+        .ods-header h2 {
+            color: #3f7e44; /* Cor do título baseada na imagem */
+        }
+
+        article h3 {
+            margin-top: 20px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none; /* Remove o estilo padrão de lista */
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .carousel-container {
+            width: 100%;
+            max-width: 850px;
+            margin-bottom: 200px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ods-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .ods-subtitle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .ods-texts-box {
+            margin-top: 50px; 
+            margin-bottom: 50px;
+            padding: 20px; 
+            background-color: #f4f4f9; 
+            border-radius: 15px;
+            border-style:solid; 
+            border-color: #3f7e44;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .ods-title h2 {
+            color: #3f7e44;
+        }
+
+        .ods-texts {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .ods-texts li {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .ods-texts-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        
+        .carousel-indicators {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .carousel-indicators span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .carousel-indicators .active {
+            background-color: #333;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start; /* Espaço entre os itens */
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: relative; /* Para o modal */
+        }
+
+        .dropdown-container {
+            top: 20px;
+            right: 20px;
+        }
+
+        /* Estilo do dropdown */
+        .dropdown {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Estilo das opções */
+        .dropdown option {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .back {
+            margin-left: 30%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Objetivo de Desenvolvimento Sustentável</h1>
+    </header>
+
+    <main>
+        <section>
+            <div class="ods-title">
+                <h2>13 Ação contra a mudança global do clima</h2>
+            </div>
+
+            <div class="ods-subtitle">
+                <p>Adotar medidas urgentes para combater as alterações climáticas e os seus impactos</p>
+            </div>
+
+            <div class="carousel-container">
+                <!-- Slide wrapper -->
+                <div class="carousel-slide" id="carouselSlide">
+                    <img src="/clima1.jpg" alt="A imagem mostra uma paisagem seca e rachada. O solo está rachado e rachado, o que sugere que a área está em seca. No fundo, há uma linha de colinas e montanhas, que são visíveis através do céu claro. O céu é azul e há algumas nuvens brancas e finas no céu. A imagem tem uma sensação de desolação e abandono.">
+                    <img src="/clima2.jpg" alt="A imagem mostra um leito de rio rachado seco e rachado, com duas pequenas canoas de madeira no fundo. A vegetação verde e as rochas de areia marcam o fundo da cena. O céu de cor laranja e rosa está cheio de nuvens finas. Parece que o céu está em um amanhecer ou crepúsculo. O contraste da cor do céu e a terra seca destacam o potencial para a seca.">
+                    <img src="/clima3.jpg" alt="A imagem mostra um planeta azul com uma tempestade circular no topo. O planeta está envolto em uma escuridão estrelada.">
+                </div>
+        
+                <!-- Botões de navegação -->
+                <div class="prev" onclick="moveSlide(-1)">&#10094;</div>
+                <div class="next" onclick="moveSlide(1)">&#10095;</div>
+            </div>
+        
+            <!-- Indicadores -->
+            <div class="carousel-indicators" id="carouselIndicators">
+                <span onclick="setSlide(0)"></span>
+                <span onclick="setSlide(1)"></span>
+                <span onclick="setSlide(2)"></span>
+            </div>
+        
+            <script>
+                let currentIndex = 0;
+        
+                function showSlide(index) {
+                    const slides = document.getElementById('carouselSlide');
+                    const indicators = document.querySelectorAll('.carousel-indicators span');
+        
+                    // Ajusta o índice para o intervalo dos slides
+                    if (index >= slides.children.length) currentIndex = 0;
+                    else if (index < 0) currentIndex = slides.children.length - 1;
+                    else currentIndex = index;
+        
+                    // Atualiza a posição do slide
+                    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+                    // Atualiza os indicadores
+                    indicators.forEach(ind => ind.classList.remove('active'));
+                    indicators[currentIndex].classList.add('active');
+                }
+        
+                function moveSlide(step) {
+                    showSlide(currentIndex + step);
+                }
+        
+                function setSlide(index) {
+                    showSlide(index);
+                }
+        
+                // Inicializa o primeiro slide
+                showSlide(currentIndex);
+            </script>
+
+            <article class="ods-texts-box">
+                <h3 class="ods-texts-title">Objetivo 13. Adotar medidas urgentes para combater as alterações climáticas e os seus impactos</h3>
+                <ul class="ods-texts">
+                    <li><strong>13.1</strong> Reforçar a resiliência e a capacidade de adaptação a riscos relacionados ao clima e às catástrofes naturais em todos os países.</li>
+                    <li><strong>13.2</strong> Integrar medidas da mudança do clima nas políticas, estratégias e planejamentos nacionais.</li>
+                    <li><strong>13.3</strong> Melhorar a educação, aumentar a conscientização e a capacidade humana e institucional sobre mitigação, adaptação, redução de impacto e alerta precoce da mudança do clima.</li>
+                    <li><strong>13.a</strong> Implementar o compromisso assumido pelos países desenvolvidos partes da Convenção Quadro das Nações Unidas sobre Mudança do Clima [UNFCCC] para a meta de mobilizar conjuntamente US$ 100 bilhões por ano a partir de 2020, de todas as fontes, para atender às necessidades dos países em desenvolvimento, no contexto das ações de mitigação significativas e transparência na implementação; e operacionalizar plenamente o Fundo Verde para o Clima por meio de sua capitalização o mais cedo possível.</li>
+                    <li><strong>13.b</strong> Promover mecanismos para a criação de capacidades para o planejamento relacionado à mudança do clima e à gestão eficaz, nos países menos desenvolvidos, inclusive com foco em mulheres, jovens, comunidades locais e marginalizadas.</li>
+                
+                </ul>
+                
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="dropdown-container">
+            <label for="fontSizeDropdown" style="color: #4CAF50; font-weight: bold;">Tamanho da Fonte:</label>
+            <select id="fontSizeDropdown" class="dropdown">
+                <option value="small">Pequeno</option>
+                <option value="medium" selected>Médio</option>
+                <option value="large">Grande</option>
+            </select>
+        </div>
+        <p class="back"><a href="index.html">Voltar para os ODS</a></p>
+    </footer>
+    <script>
+        // Altera o tamanho da fonte da página com base na seleção
+    const fontSizeDropdown = document.getElementById("fontSizeDropdown");
+    fontSizeDropdown.addEventListener("change", function() {
+        if (this.value === "small") {
+            document.body.style.fontSize = "14px";
+        } else if (this.value === "medium") {
+            document.body.style.fontSize = "16px";
+        } else if (this.value === "large") {
+            document.body.style.fontSize = "18px";
+        }
+    });
+</script>
+</body>
+</html>
